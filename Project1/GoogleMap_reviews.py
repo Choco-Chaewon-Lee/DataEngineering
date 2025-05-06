@@ -47,10 +47,10 @@ for card in place_cards:
             place_links.append(link)
     except:
         continue
-print(f"\n👉 총 수집된 장소 링크 개수: {len(place_links)}개")
+print(f"\n 총 수집된 장소 링크 개수: {len(place_links)}개")
 
 if len(place_links) < 120:
-    print("❌ 수집된 장소 링크 120개 미만 --> 프로그램 종료")
+    print("수집된 장소 링크 120개 미만 --> 프로그램 종료")
     sys.exit()
 
 # 결과 저장 리스트
@@ -156,7 +156,7 @@ for place in results:
             {"tour_name": tour_name},
             {"$push": {"reviews": {"$each": reviews}}}
         )
-        print(f"✅ '{tour_name}'에 리뷰 {len(reviews)}개 추가 완료.")
+        print(f"'{tour_name}'에 리뷰 {len(reviews)}개 추가 완료.")
     else:
         # 문서가 없으면 새로 생성
         new_doc = {
@@ -169,4 +169,4 @@ for place in results:
             "reviews": reviews
         }
         collection.insert_one(new_doc)
-        print(f"🆕 '{tour_name}' 새 문서 생성 및 리뷰 {len(reviews)}개 추가 완료.")
+        print(f"'{tour_name}' 새 문서 생성 및 리뷰 {len(reviews)}개 추가 완료.")
