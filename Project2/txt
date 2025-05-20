@@ -1,0 +1,5 @@
+[Pricing]
+Roboflow : $49 (360 credits, 1 credits per 5000 imgs storage) / CVAT : $139
+
+[Before Annotation]
+resize 224x224
